@@ -11,7 +11,7 @@ Petit site statique, sans outil de build ni dépendance, pour présenter Vessara
 
 ## Identité visuelle
 
-Le site reprend la direction artistique du jeu (« Obsidienne & braise ») : couleurs de `Assets/_Vessara/UI/Match.uss`, polices Cinzel, emblème. `assets/embleme.png` et `assets/fonts/` sont des copies du dossier du jeu (les polices sont sous licence OFL, `OFL-Cinzel.txt` reste à côté). Si la DA du jeu évolue, recopier ces fichiers et reporter les couleurs en haut de `style.css`.
+Le site reprend la direction artistique du jeu (« Obsidienne & braise ») : couleurs de `Assets/_Vessara/UI/Match.uss`, polices Cinzel, emblème. `assets/embleme.png` et `assets/fonts/` sont des copies du dossier du jeu (les polices sont sous licence OFL, `OFL-Cinzel.txt` reste à côté). `assets/og-image.png` (1200×630) est le visuel affiché quand on partage un lien (balises `og:*` et `twitter:*` des pages publiques). Si la DA du jeu évolue, recopier ces fichiers et reporter les couleurs en haut de `style.css`.
 
 ## Alimenter le journal de dev (à chaque build)
 

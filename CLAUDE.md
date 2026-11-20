@@ -13,6 +13,7 @@ Site statique (hébergement prévu : GitHub Pages) qui présente Vessara et recr
 | `mentions-legales.html`, `confidentialite.html` | Pages légales (éditeur à titre non professionnel, hébergeur GitHub, RGPD du formulaire). Contiennent `A_REMPLACER_PRENOM_NOM` et `A_REMPLACER_MAIL` à remplir **avant toute publication** ; à reprendre quand une structure (société, association) existera ou si une boutique ouvre |
 | `style.css` | Style commun, aligné sur la DA du jeu « Obsidienne & braise » : mêmes jetons que `Assets/_Vessara/UI/Match.uss` (`--ui-*`), titres en Cinzel. Si le jeu change de couleur, reporter ici |
 | `assets/embleme.png` | **Copie** de `Assets/_Vessara/Resources/Menu/embleme.png` (emblème du jeu, aussi favicon) ; à recopier s'il change |
+| `assets/og-image.png` | Visuel 1200×630 des aperçus de lien (Open Graph + Twitter Card, balises dans `<head>` de index/jeu/devlog/test, URLs absolues vers GitHub Pages). Généré avec Pillow à partir de l'emblème et de Cinzel ; à refaire si le logo change. Les réseaux gardent l'aperçu en cache : tester avec les débogueurs (Twitter Card Validator, Facebook Sharing Debugger) |
 | `assets/fonts/` | `Cinzel-Bold.ttf`, `Cinzel-Black.ttf` (copiées du jeu) et leur licence `OFL-Cinzel.txt`, à garder avec elles |
 | `README.md` | Alimenter le journal, voir le site en local, mise en service du formulaire |
 
