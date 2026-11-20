@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vessara — Devenir testeur</title>
+<meta name="description" content="Demande un accès à la version de test de Vessara. Pas besoin de compte Discord.">
+<link rel="icon" href="assets/embleme.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Navigation principale">
+  <a href="index.html">Accueil</a>
+  <a href="jeu.html">Comment jouer</a>
+  <a href="devlog.html">Journal de dev</a>
+  <a href="test.html" aria-current="page">Devenir testeur</a>
+</nav>
+
+<main>
+  <h1 class="small">Devenir testeur</h1>
+  <p class="tagline">Reçois la version de test par mail</p>
+
+  <section class="panel">
+    <div id="intro">
+      <p>Vessara est en test fermé. Remplis ce formulaire et tu recevras par mail le lien de la version de test.</p>
+      <ul class="facts">
+        <li>Version Windows uniquement pour l'instant.</li>
+        <li>Pas besoin de compte Discord.</li>
+        <li>Tu n'as pas encore vu les règles ? Elles sont sur la page <a href="jeu.html">Comment jouer</a>.</li>
+      </ul>
+    </div>
+
+    <form id="form" novalidate>
+      <!-- Clé publique Web3Forms : à remplacer (voir README.md). -->
+      <input type="hidden" name="access_key" value="b2ef9059-413e-4132-be66-ccc3680d830b">
+      <input type="hidden" name="subject" value="Vessara : nouvelle demande de test">
+      <input type="hidden" name="from_name" value="Site Vessara testeurs">
+      <!-- Anti-spam Web3Forms : une case cachée que seuls les robots cochent. -->
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <!-- Deuxième piège, en texte. -->
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <label for="name">Ton pseudo ou prénom</label>
+      <input id="name" name="name" type="text" required maxlength="60" autocomplete="nickname">
+
+      <label for="email">Ton adresse mail <span class="hint">(le build t'y sera envoyé)</span></label>
+      <input id="email" name="email" type="email" required maxlength="120" autocomplete="email">
+
+      <label for="os">Ton ordinateur</label>
+      <select id="os" name="systeme" required>
+        <option value="">Choisis…</option>
+        <option>Windows 10 / 11</option>
+        <option>Autre (je ne pourrai pas tester tout de suite)</option>
+      </select>
+
+      <label for="msg">Un mot sur toi <span class="hint">(facultatif : tu joues à d'autres jeux de cartes ?)</span></label>
+      <textarea id="msg" name="message" maxlength="600"></textarea>
+
+      <label class="consent">
+        <input type="checkbox" id="consent" required>
+        <span>J'accepte que mon adresse mail soit utilisée uniquement pour m'envoyer la version de test et me contacter à son sujet. Je peux demander sa suppression à tout moment.</span>
+      </label>
+
+      <button type="submit" id="send">Demander un accès</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+<footer>Test fermé : tu recevras une réponse manuelle, ça peut prendre quelques jours.</footer>
+<script src="form.js"></script>
+<footer class="legal"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></footer>
+</body>
+</html>

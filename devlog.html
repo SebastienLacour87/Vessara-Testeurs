@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vessara — Journal de dev</title>
+<meta name="description" content="Le journal de développement de Vessara : ce qui change à chaque version.">
+<link rel="icon" href="assets/embleme.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Navigation principale">
+  <a href="index.html">Accueil</a>
+  <a href="jeu.html">Comment jouer</a>
+  <a href="devlog.html" aria-current="page">Journal de dev</a>
+  <a href="test.html">Devenir testeur</a>
+</nav>
+
+<main>
+  <h1 class="small">Journal de dev</h1>
+  <p class="tagline">Ce qui change à chaque version du jeu. Dernière version : <span id="lastversion">…</span></p>
+
+  <section id="entries">
+    <noscript><p class="muted">Cette page a besoin de JavaScript pour afficher le journal.</p></noscript>
+  </section>
+</main>
+<footer>Les versions précédentes sont plus courtes dans ce journal : seules les plus marquantes y figurent.</footer>
+<script src="devlog-data.js"></script>
+<script src="devlog.js"></script>
+<footer class="legal"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></footer>
+</body>
+</html>

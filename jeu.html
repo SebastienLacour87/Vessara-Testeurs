@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vessara — Comment jouer</title>
+<meta name="description" content="Les règles de Vessara expliquées : poser en même temps, le Destin, les objets de victoire, les cartes.">
+<link rel="icon" href="assets/embleme.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Navigation principale">
+  <a href="index.html">Accueil</a>
+  <a href="jeu.html" aria-current="page">Comment jouer</a>
+  <a href="devlog.html">Journal de dev</a>
+  <a href="test.html">Devenir testeur</a>
+</nav>
+
+<main>
+  <h1 class="small">Comment jouer</h1>
+  <p class="tagline">Les règles en cinq minutes. Le jeu te les fait aussi découvrir pas à pas dans sa campagne.</p>
+
+  <section class="panel">
+    <h2>Le but</h2>
+    <p>Trois <strong>objets de victoire</strong> sont en jeu. Un nouvel objet se révèle à chaque tour. Chacun donne un défi précis (avoir assez de cartes en jeu, dépenser assez de Destin, détruire assez d'adversaires…). Le premier joueur qui en <strong>valide deux</strong> gagne la partie. Si personne n'y arrive, la partie s'arrête après dix tours.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Un tour de jeu</h2>
+    <ol class="steps">
+      <li><strong>Tu choisis tes cartes</strong> dans ta main et tu les poses face cachée sur ton plateau. Ton adversaire fait la même chose, au même moment.</li>
+      <li><strong>Les cartes se retournent</strong> ensemble. Leurs effets se déclenchent, dans l'ordre, avec une animation pour chacun.</li>
+      <li><strong>Un nouvel objet de victoire</strong> se révèle, et on regarde qui valide quoi.</li>
+      <li>Le tour suivant commence, avec un peu plus de Destin.</li>
+    </ol>
+  </section>
+
+  <section class="panel">
+    <h2>Le Destin</h2>
+    <p>Le Destin est la ressource qui paie tes cartes. Au tour 1 tu as 1 Destin, au tour 2 tu en as 2, et ainsi de suite : <strong>ton Destin égale le numéro du tour</strong>. Il ne se reporte pas : ce que tu ne dépenses pas est perdu.</p>
+    <p class="muted">Ça rend les premiers tours serrés. Mieux vaut avoir quelques cartes bon marché pour bien démarrer, et garder une grosse carte pour quand le Destin sera là.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Les cartes</h2>
+    <ul class="facts">
+      <li>Chaque carte a un <strong>coût en Destin</strong> et une <strong>Force</strong>.</li>
+      <li>Il y a <strong>cinq raretés</strong>, des plus communes aux Divines, et cinq univers de légendes avec leur style de jeu.</li>
+      <li>Un effet se déclenche à un moment précis : <strong>à la pose</strong>, <strong>à la destruction</strong> de la carte, <strong>en fin de tour</strong>, ou <strong>en continu</strong> tant que la carte est là.</li>
+      <li>Certaines cartes ont <strong>deux modes</strong> : un effet si elle est posée <em>devant</em>, un autre si elle est posée <em>derrière</em>. À toi de choisir selon la situation.</li>
+      <li>Les cartes détruites vont au <strong>cimetière</strong>, que tu peux consulter. Certaines cartes savent aller y chercher.</li>
+      <li>Ton deck compte <strong>20 cartes</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Mots à connaître</h2>
+    <dl class="words">
+      <dt>Voler</dt>
+      <dd>Prendre du Destin ou de la Force à l'adversaire. Le vol de Destin est plafonné à 1 par tour.</dd>
+      <dt>Sacrifier</dt>
+      <dd>Retirer une de tes propres cartes pour déclencher un effet plus puissant.</dd>
+      <dt>Ferveur</dt>
+      <dd>Cette carte gagne +1 Force pour chaque autre carte alliée du même univers en jeu.</dd>
+      <dt>Dévotion</dt>
+      <dd>Cette carte coûte 1 Destin de moins pour chaque carte alliée du même univers déjà en jeu. Son coût peut tomber à 0.</dd>
+      <dt>Orfèvrerie</dt>
+      <dd>Cette carte gagne +1 Force pour chaque Relique mineure alliée en jeu (un petit jeton que certaines cartes créent).</dd>
+    </dl>
+  </section>
+
+  <section class="panel">
+    <h2>La campagne</h2>
+    <p>« Le Sacre des Mythes » compte sept missions. Chacune te présente une idée du jeu avec des bulles d'explication, un adversaire taillé pour l'occasion et des cartes offertes à la fin. À la fin d'une mission gagnée, tu ouvres un <strong>booster</strong> pour agrandir ta collection.</p>
+    <p>Il y a aussi des parties libres contre l'ordinateur, en trois niveaux de difficulté.</p>
+  </section>
+
+  <p class="center"><a class="cta" href="test.html">Essayer le jeu</a></p>
+</main>
+<footer>Les règles évoluent avec les tests : le <a href="devlog.html">journal de dev</a> note chaque changement.</footer>
+<footer class="legal"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></footer>
+</body>
+</html>

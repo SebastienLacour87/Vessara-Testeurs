@@ -1,0 +1,205 @@
+/* Direction artistique « Obsidienne & braise », reprise du jeu :
+   mêmes jetons que Assets/_Vessara/UI/Match.uss (--ui-*), mêmes polices (Cinzel).
+   Si le jeu change de couleur, changer ici les mêmes valeurs. */
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/fonts/Cinzel-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/fonts/Cinzel-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+  --bg-0: #08070a;
+  --bg-1: #150e0f;
+  --bg-2: #241614;
+  --ink: #f8ece1;
+  --ink-dim: #b6a29a;
+  --accent: #ee6a2a;
+  --accent-hi: #ffc45e;
+  --accent-lo: #7a2708;
+  --spark: #fff1cf;
+  --line: #7c4a27;
+  --panel-line: #6f4425;
+  --on-accent: #1a0a04;
+  --error: #ff9f92;
+  --ok: #8fd19e;
+  --title-font: "Cinzel", Georgia, "Times New Roman", serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(238, 106, 42, .20), transparent 70%),
+    radial-gradient(ellipse 100% 40% at 50% 100%, rgba(122, 39, 8, .25), transparent 70%),
+    var(--bg-0);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  line-height: 1.6;
+}
+a { color: var(--accent-hi); }
+a:hover { color: var(--spark); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent-hi);
+  outline-offset: 2px;
+}
+
+/* Navigation */
+.nav {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 18px 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  justify-content: center;
+}
+.nav a {
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--ink-dim);
+  text-decoration: none;
+  padding: 8px 2px;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover { color: var(--ink); }
+.nav a[aria-current="page"] { color: var(--accent-hi); border-bottom-color: var(--accent); }
+
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+
+/* Le nom du jeu : Cinzel Black espacé, braise, avec son halo (comme .wordmark du jeu) */
+h1 {
+  margin: 0;
+  font-family: var(--title-font);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 11vw, 4.5rem);
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: center;
+  text-shadow: 0 0 18px #6a2a08, 0 0 1px var(--accent-lo);
+  padding-left: .17em; /* compense l'espacement de la dernière lettre */
+}
+h1.small { font-size: clamp(1.8rem, 7vw, 2.5rem); letter-spacing: .2em; padding-left: .2em; }
+
+.tagline {
+  width: fit-content;
+  margin: 8px auto 32px;
+  max-width: 100%;
+  padding: 6px 0 0 .3em;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  color: var(--ink-dim);
+}
+
+.emblem {
+  display: block;
+  width: min(220px, 55vw);
+  height: auto;
+  margin: 8px auto 12px;
+  filter: drop-shadow(0 0 28px rgba(238, 106, 42, .45));
+}
+
+h2 {
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+h3 { font-family: var(--title-font); font-weight: 700; margin: 20px 0 4px; font-size: 1rem; letter-spacing: .08em; color: var(--spark); }
+.muted { color: var(--ink-dim); }
+
+/* Panneau : fond obsidienne, liseré braise (.panel du jeu) */
+.panel {
+  background: rgba(21, 14, 15, .94);
+  border: 1px solid var(--panel-line);
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+}
+.panel > :first-child { margin-top: 0; }
+.panel > :last-child { margin-bottom: 0; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-bottom: 20px; }
+.grid .panel { margin: 0; }
+.grid h3 { color: var(--accent-hi); margin-top: 0; }
+
+/* Bouton principal : braise pleine, texte sombre (comme JOUER dans le jeu) */
+.cta, button {
+  display: inline-block;
+  font-family: var(--title-font);
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  text-decoration: none;
+  color: var(--on-accent);
+  background: linear-gradient(#ff8a45, var(--accent) 55%, #c4501a);
+  border: 1px solid var(--accent-hi);
+  border-radius: 6px;
+  box-shadow: 0 0 18px rgba(238, 106, 42, .35);
+  cursor: pointer;
+}
+.cta { padding: 12px 28px; }
+.cta:hover, button:hover:not(:disabled) { color: var(--on-accent); background: linear-gradient(#ffa05f, #f57a38 55%, #d65a20); box-shadow: 0 0 26px rgba(255, 196, 94, .45); }
+.center { text-align: center; }
+
+ul.facts { padding-left: 20px; color: var(--ink-dim); }
+ul.facts strong { color: var(--ink); }
+ol.steps { padding-left: 22px; }
+ol.steps li { margin-bottom: 10px; }
+ol.steps li::marker { color: var(--accent-hi); font-weight: bold; }
+
+dl.words dt { font-family: var(--title-font); font-weight: 700; letter-spacing: .08em; color: var(--accent-hi); margin-top: 14px; }
+dl.words dd { margin: 2px 0 0; color: var(--ink-dim); }
+
+/* Journal de développement */
+.entry { border-left: 3px solid var(--accent-lo); padding: 2px 0 2px 18px; margin-bottom: 28px; }
+.entry h3 { margin: 0; font-size: 1.1rem; color: var(--spark); }
+.entry .meta { font-family: var(--title-font); font-weight: 700; letter-spacing: .12em; color: var(--accent); font-size: .78rem; text-transform: uppercase; margin: 2px 0 6px; }
+.entry ul { margin: 6px 0 0; padding-left: 20px; color: var(--ink-dim); }
+
+/* Formulaire : champs obsidienne, liseré qui s'allume au focus (TextField du jeu) */
+label { display: block; margin: 16px 0 6px; font-weight: 600; }
+.hint { font-weight: normal; color: var(--ink-dim); font-size: .9rem; }
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg-2);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--accent-hi); }
+textarea { min-height: 90px; resize: vertical; }
+.consent { display: flex; gap: 10px; align-items: flex-start; margin-top: 20px; font-weight: normal; font-size: .92rem; color: var(--ink-dim); }
+.consent input { margin-top: 5px; accent-color: var(--accent); }
+button { margin-top: 24px; width: 100%; padding: 12px; }
+button:disabled { opacity: .6; cursor: wait; }
+#status { margin: 16px 0 0; min-height: 1.5em; text-align: center; }
+#status.err { color: var(--error); }
+#status.ok { color: var(--ok); }
+/* Champ piège : invisible pour les humains, rempli par les robots. */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+footer.legal { font-size: .8rem; padding-top: 0; margin-top: -24px; }
+footer.legal a { color: var(--ink-dim); }
+footer { max-width: 760px; margin: 0 auto; padding: 0 16px 40px; text-align: center; color: var(--ink-dim); font-size: .85rem; }
