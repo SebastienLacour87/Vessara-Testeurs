@@ -4,6 +4,22 @@
 // Rappel : parler des cartes, créatures et légendes, jamais d'un peuple ou d'une religion.
 window.DEVLOG = [
   {
+    version: "0.1.119",
+    date: "2026-11-22",
+    titre: "Chaque carte a sa voix, son histoire et son effet",
+    points: [
+      "Les 150 cartes ont maintenant leur propre son à la pose : cris, rugissements, instruments ou coups selon la créature. Des sons de destruction par univers et un nouveau son de résurrection s'y ajoutent.",
+      "Chaque carte a un petit texte d'histoire, lisible dans la Collection quand tu l'ouvres en grand.",
+      "Le Kraken laisse sa place à Scylla, la créature à six têtes de chien : nouvelle illustration, six variantes de style et un tout nouvel effet, où ses têtes jaillissent de la mer, aussi bien à la pose que sur la carte qu'elle détruit.",
+      "Le fond du Japon est refait : un papier clair avec une branche de cerisier, pour ne plus le confondre avec celui de la Grèce.",
+      "Les titres des cartes nordiques changent de police : bien plus lisibles.",
+      "L'adversaire choisit ses cibles à la pose, comme le ferait un joueur : Esprit de la Forge ne détruit plus le jeton créé au même tour. Le texte de l'Éclaireur Spartiate est corrigé.",
+      "Six illustrations signalées par les testeurs ont été détourées à la main (Raijin, Baba Yaga, la Reine des neiges). Merci pour les retours !",
+      "Huit dos de cartes à choisir dans le Profil, plus cinq dos illustrés, un par univers.",
+      "Le Phénix déploie ses ailes de feu au retournement ; Horus, Isis, Nephthys et la Valkyrie laissent tomber une pluie de plumes."
+    ]
+  },
+  {
     version: "0.1.118",
     date: "2026-11-19",
     titre: "Des pochettes de booster à chaque panthéon",
